@@ -1,0 +1,59 @@
+{
+  "split_protocol": "benchmark",
+  "model_file": "lgbm_v1.txt",
+  "test_rows": 1800360,
+  "test_fraud": 1312,
+  "pr_auc": 0.3665,
+  "bootstrap_95": {
+    "pr_auc": [
+      0.3396,
+      0.3879
+    ],
+    "precision@500": [
+      0.7293,
+      0.7953
+    ]
+  },
+  "rule": {
+    "flagged": 57159,
+    "precision": 0.016,
+    "recall": 0.6951
+  },
+  "budget_table": [
+    {
+      "alerts": 500,
+      "precision": 0.766,
+      "recall": 0.2919
+    },
+    {
+      "alerts": 1000,
+      "precision": 0.455,
+      "recall": 0.3468
+    },
+    {
+      "alerts": 2000,
+      "precision": 0.2555,
+      "recall": 0.3895
+    },
+    {
+      "alerts": 5000,
+      "precision": 0.1252,
+      "recall": 0.4771
+    },
+    {
+      "alerts": 10000,
+      "precision": 0.0731,
+      "recall": 0.5572
+    },
+    {
+      "alerts": 20000,
+      "precision": 0.0426,
+      "recall": 0.6494
+    },
+    {
+      "alerts": 56918,
+      "precision": 0.0183,
+      "recall": 0.7942
+    }
+  ]
+}
