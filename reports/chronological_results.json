@@ -1,0 +1,153 @@
+{
+  "split_protocol": "chronological (hour-of-day)",
+  "params": {
+    "n_estimators": 1500,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_child_samples": 500,
+    "reg_lambda": 10.0,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbose": -1
+  },
+  "features": [
+    "log_amount",
+    "log_time_since_last",
+    "log_velocity",
+    "spending_deviation_score",
+    "burst",
+    "has_history",
+    "day_of_week",
+    "is_first_transaction",
+    "is_weekend",
+    "is_cross_bank_transfer",
+    "is_cross_currency_transfer",
+    "is_new_receiver",
+    "is_new_bank",
+    "is_new_payment_format",
+    "channel_ACH",
+    "channel_Bitcoin",
+    "channel_Cash",
+    "channel_Cheque",
+    "channel_Credit Card",
+    "channel_Reinvestment",
+    "channel_Wire"
+  ],
+  "valid": {
+    "rows": 1800359,
+    "fraud": 1631,
+    "pr_auc": 0.4467,
+    "bootstrap_95": {
+      "pr_auc": [
+        0.4267,
+        0.4714
+      ],
+      "precision@500": [
+        0.9029,
+        0.9428
+      ]
+    },
+    "rule": {
+      "flagged": 58095,
+      "precision": 0.0205,
+      "recall": 0.7308
+    },
+    "budget_table": [
+      {
+        "alerts": 500,
+        "precision": 0.924,
+        "recall": 0.2833
+      },
+      {
+        "alerts": 1000,
+        "precision": 0.653,
+        "recall": 0.4004
+      },
+      {
+        "alerts": 2000,
+        "precision": 0.374,
+        "recall": 0.4586
+      },
+      {
+        "alerts": 5000,
+        "precision": 0.1726,
+        "recall": 0.5291
+      },
+      {
+        "alerts": 10000,
+        "precision": 0.0998,
+        "recall": 0.6119
+      },
+      {
+        "alerts": 20000,
+        "precision": 0.0562,
+        "recall": 0.6898
+      },
+      {
+        "alerts": 56918,
+        "precision": 0.024,
+        "recall": 0.8387
+      }
+    ]
+  },
+  "test": {
+    "rows": 1800360,
+    "fraud": 1059,
+    "pr_auc": 0.1858,
+    "bootstrap_95": {
+      "pr_auc": [
+        0.1628,
+        0.211
+      ],
+      "precision@500": [
+        0.3327,
+        0.4141
+      ]
+    },
+    "rule": {
+      "flagged": 58970,
+      "precision": 0.0116,
+      "recall": 0.6449
+    },
+    "budget_table": [
+      {
+        "alerts": 500,
+        "precision": 0.372,
+        "recall": 0.1756
+      },
+      {
+        "alerts": 1000,
+        "precision": 0.213,
+        "recall": 0.2011
+      },
+      {
+        "alerts": 2000,
+        "precision": 0.1275,
+        "recall": 0.2408
+      },
+      {
+        "alerts": 5000,
+        "precision": 0.07,
+        "recall": 0.3305
+      },
+      {
+        "alerts": 10000,
+        "precision": 0.0419,
+        "recall": 0.3957
+      },
+      {
+        "alerts": 20000,
+        "precision": 0.027,
+        "recall": 0.5099
+      },
+      {
+        "alerts": 56918,
+        "precision": 0.0131,
+        "recall": 0.7054
+      }
+    ]
+  }
+}
