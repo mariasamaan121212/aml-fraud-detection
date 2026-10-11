@@ -1,0 +1,62 @@
+{
+  "valid": {
+    "ACH": {
+      "rows": 225043,
+      "fraud": 1385,
+      "base_rate": 0.00615,
+      "pr_auc": 0.5238,
+      "lift_vs_base": 85.1
+    },
+    "non_ACH": {
+      "rows": 1575316,
+      "fraud": 246,
+      "base_rate": 0.00016,
+      "pr_auc": 0.0042,
+      "lift_vs_base": 26.8
+    },
+    "caught_in_top_alerts": {
+      "500": {
+        "ACH": 462,
+        "non_ACH": 0
+      },
+      "5000": {
+        "ACH": 861,
+        "non_ACH": 2
+      },
+      "56918": {
+        "ACH": 1347,
+        "non_ACH": 21
+      }
+    }
+  },
+  "test": {
+    "ACH": {
+      "rows": 224499,
+      "fraud": 787,
+      "base_rate": 0.00351,
+      "pr_auc": 0.2476,
+      "lift_vs_base": 70.6
+    },
+    "non_ACH": {
+      "rows": 1575861,
+      "fraud": 272,
+      "base_rate": 0.00017,
+      "pr_auc": 0.0034,
+      "lift_vs_base": 19.9
+    },
+    "caught_in_top_alerts": {
+      "500": {
+        "ACH": 186,
+        "non_ACH": 0
+      },
+      "5000": {
+        "ACH": 348,
+        "non_ACH": 2
+      },
+      "56918": {
+        "ACH": 725,
+        "non_ACH": 22
+      }
+    }
+  }
+}
