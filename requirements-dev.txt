@@ -1,0 +1,5 @@
+-r requirements.txt
+scikit-learn==1.9.1
+xgboost==3.4.1
+matplotlib==3.11.2
+ipykernel==7.4.0
