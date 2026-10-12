@@ -88,10 +88,7 @@ def health():
         "trained_at_utc": meta["trained_at_utc"],
         "n_features": len(meta["feature_columns"]),
     }
-
-
-@app.post("/predict")
-def predict(t: Transaction):
+def score_transaction(t: Transaction) -> dict:
     row = t.model_dump()
     row["is_weekend"] = int(t.day_of_week >= 5)
     row["is_first_transaction"] = int(t.velocity_score == 0)
@@ -99,3 +96,8 @@ def predict(t: Transaction):
     result["warnings"] = usual_range_warnings(t)
     result["note"] = NOTE
     return result
+
+
+@app.post("/predict")
+def predict(t: Transaction):
+    return score_transaction(t)
